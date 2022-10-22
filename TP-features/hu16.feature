@@ -1,25 +1,8 @@
-Feature: HU16 - Como cliente quiero publicar los insumos sobrantes del día para reducir al mínimo los desperdicios de estos
+Feature: HU16 - Como cliente quiero ver las opciones que ofrece Tasty Point para conocer el funcionamiento de la app y elegir alguna de sus opciones disponibles.
 
-Scenario: E01 - Selección del producto a publicar
+Scenario: E01 - El cliente ingresa a la lista de opciones.
 
 TA01
-Given que el cliente posee excedentes de platos del día
-Y el cliente se encuentra en la pantalla principal y desea publicar sus excedentes 
-When el cliente seleccione la opción Publicar 
-Then la aplicación le preguntará qué desea publicar (platos de comida o insumos)
-
-Scenario: E02 - Descripción del insumo
-
-TA02
-Given que el cliente se encuentra en la pantalla de elección de plato o insumo 
-When el cliente escoja la opción de insumo 
-Then la aplicación le pedirá que ingrese los datos del insumo(nombre del insumo, porciones, precio estimado, entre otros).
-
-Scenario: E03 - Realización de la publicación
-
-TA03
-Given que el cliente se encuentra en la pantalla de completado de datos del insumo
-When  el cliente complete correctamente los datos
-Y seleccione la opción publicar  
-Then la aplicación le mostrará un mensaje “Publicación realizada”.
-
+Given que el cliente ha iniciado sesión, se encuentra en la ventana principal de Tasty point y desea ver las opciones disponibles de la app.  
+When el cliente seleccione el símbolo listo. 
+Then la aplicación mostrará las opciones disponibles: "Inicio", "Órdenes", "Catálogo", "Perfil",  en formato de lista.

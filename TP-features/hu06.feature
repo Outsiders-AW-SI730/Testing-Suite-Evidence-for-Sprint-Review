@@ -1,16 +1,16 @@
-Feature: HU06 - Como consumidor quiero clasificar de manera favorita mis productos para lograr visualizar la disponibilidad en la sección “Mis favoritos”
+Feature: HU06 - Como consumidor quiero guardar la información de mis productos favoritos.
 
-Scenario: E01 -  Desarrollo de sección “Mis favoritos”.
+Scenario: E01 -  Guardar productos favoritos.
 
 TA01
-Given un consumidor, que navega en la aplicación 
-When ingresa a buscar platos y selecciona una opción fijar como favoritos 
-Then se añade a la sección de favoritos.
+Given que el consumidor, se encuentra en la ventana “Lista de productos”, 
+When presiona el icono de corazón vacío que posee el artículo en la lista de productos publicados por los restaurantes registrados en la aplicación, 
+Then se añaden los datos del producto a la sección de favoritos y el icono de corazón vacío cambia por uno lleno.
 
-Scenario: E02 -  Elaboración de interfaz para dicha función.
+Scenario: E02 -  Eliminar producto de favoritos
 
 TA02
-Given que el consumidor está en la ventana de registro y completa todos los campos, 
-When  presiona el botón registrarse.
-Then se muestra el mensaje “Se le ha mandado un correo de confirmación de cuenta y mensaje de texto a su teléfono”.
+Given que el consumidor, se encuentra en la ventana “Lista de productos”,
+When  presiona el icono de corazón lleno que posee el artículo en la lista de productos publicados por los restaurantes registrados en la aplicación, 
+Then se eliminan los datos del producto a la sección de favoritos y el icono de corazón lleno cambia por uno vacío.
 

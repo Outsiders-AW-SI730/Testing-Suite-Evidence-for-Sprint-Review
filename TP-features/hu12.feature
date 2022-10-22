@@ -1,9 +1,33 @@
-Feature: HU12 - Como consumidor quiero ver el historial de los productos que he comprado, mostrando datos puntuales de mis pedidos, y a partir de eso poder obtener descuentos o promociones posterior a cierto número de compras. 
+Feature: HU12 - Como cliente deseo poder pagar la suscripción desde la aplicación para acceder a más beneficios.
 
-Scenario: E01 - El consumidor logra acceder a su historial de compras. 
+Scenario: E01 - Visualización de las opciones de suscripción
 
 TA01
-Given que el consumidor está con su sesión iniciada   
-When se dirija a la sección de “historial de compras” podrá visualizar las compras que ha hecho desde que hace uso de la aplicación, contemplando la fecha, hora, el restaurante, monto pagado y el lugar de entrega    
-Then acumula cierto número de compras se le proporciona un descuento o promoción en su próxima compra.
+Given que el cliente ya se encuentra registrado 
+When el cliente desee usar alguna función de la aplicación 
+Then la aplicación le mostrará una pantalla con las opciones de suscripción al servicio.
+
+Scenario: E02 - El cliente ingresa los datos de su tarjeta.
+
+TA02
+Given que el cliente visualiza las opciones de suscripción.
+When  el cliente selecciona una de las opciones  
+Then la aplicación lo redirigirá a una pantalla en la que podrá ingresar la tarjeta de crédito o débito con la que realizará el pago.
+
+Scenario: E03 - Realización exitosa del pago
+
+TA03
+Given que el cliente ya ingresó los datos necesarios para el pago
+When  el cliente seleccione el botón Pagar  
+Then la aplicación le mostrará un mensaje de “Pago realizado con éxito”
+Y el cliente podrá utilizar la aplicación.
+
+
+Scenario: E04 - Realización fallida del pago
+
+TA04
+Given que el cliente ya ingresó los datos necesarios para el pago
+When  el cliente seleccione el botón Pagar
+Y la aplicación detecte algún inconveniente   
+Then la aplicación le mostrará un mensaje de “El pago no se pudo realizar. Inténtelo de nuevo más tarde”.
 

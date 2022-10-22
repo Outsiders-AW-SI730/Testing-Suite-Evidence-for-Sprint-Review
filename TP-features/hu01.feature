@@ -1,11 +1,11 @@
-Feature: HU01 - Como consumidor quiero crear una cuenta para poder realizar compras de platos de comida a un bajo precio.
+Feature: HU01 - Como consumidor quiero crear una cuenta para acceder a la aplicación.
 
 Scenario: E01 - El consumidor quiere registrarse en la aplicación.
 
 TA01
 Given que el consumidor se encuentra en la ventana de registro y completa todos los campos
 When presiona el botón registrarse
-Then se muestra el mensaje “Se le envió un correo de confirmación de cuenta”.
+Then podrá acceder a la aplicación
 
 Scenario: E02 - El consumidor no completa los campos obligatorios.
 

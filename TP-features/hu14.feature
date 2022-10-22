@@ -1,33 +1,25 @@
-Feature: HU14 - Como cliente deseo poder pagar la suscripción desde la aplicación para facilitar un control de pagos
+Feature: HU14 - Como cliente quiero publicar los insumos sobrantes del día para reducir al mínimo los desperdicios de estos
 
-Scenario: E01 - Presentación de las opciones de suscripción.
+Scenario: E01 - Cliente selecciona producto a publicar
 
 TA01
-Given que el cliente ya se encuentra registrado 
-When el cliente desee usar alguna función de la aplicación 
-Then la aplicación le mostrará una pantalla con las opciones de suscripción al servicio.
+Given que el cliente posee excedentes de insumos del día. 
+And el cliente se encuentra en la ventana “Catálogo” y desea publicar sus excedentes.  
+When el cliente seleccione la opción Publicar 
+Then la aplicación le preguntará qué desea publicar (platos de comida o insumos)
 
-Scenario: E02 - Ingreso de datos de forma de pago
+Scenario: E02 - Cliente ingresa descripción del insumo
 
 TA02
-Given que el cliente visualiza las opciones de suscripción.
-When  el cliente selecciona una de las opciones  
-Then la aplicación lo redirigirá a una pantalla en la que podrá ingresar la tarjeta de crédito o débito con la que realizará el pago.
+Given que el cliente se encuentra en la pantalla de elección de plato o insumo 
+When el cliente escoja la opción de insumo 
+Then la aplicación le pedirá que ingrese los datos del insumo(nombre del insumo, porciones, precio estimado, entre otros).
 
-Scenario: E03 - Realización exitosa del pago
+Scenario: E03 - Cliente realiza la publicación
 
 TA03
-Given que el cliente ya ingresó los datos necesarios para el pago
-When  el cliente seleccione el botón Pagar  
-Then la aplicación le mostrará un mensaje de “Pago realizado con éxito”
-Y el cliente podrá utilizar la aplicación.
-
-
-Scenario: E04 - Realización fallida del pago
-
-TA04
-Given que el cliente ya ingresó los datos necesarios para el pago
-When  el cliente seleccione el botón Pagar
-Y la aplicación detecte algún inconveniente   
-Then la aplicación le mostrará un mensaje de “El pago no se pudo realizar. Inténtelo de nuevo más tarde”.
+Given que el cliente se encuentra en la pantalla de completado de datos del insumo
+When  el cliente complete correctamente los datos
+And seleccione la opción publicar  
+Then la aplicación le mostrará un mensaje “Publicación realizada”.
 

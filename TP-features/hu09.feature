@@ -1,9 +1,12 @@
-Feature: HU09 - Como consumidor quiero filtrar la lista de restaurantes para poder encontrar rápidamente mi restaurante de preferencia.
+Feature: HU09 - Como consumidor quiero redactar un comentario sobre un determinado restaurante acerca de mi experiencia con ellos para poder compartir mi opinión con los demás.
 
-Scenario: E01 - El consumidor no encuentra su filtro deseado.
+Scenario: E01 - El consumidor publica el comentario.
 
 TA01
-Given que el consumidor está con su sesión iniciada,  
-When se dirija a la sección principal con todos los restaurantes,  
-Then se mostrará un botón para poder filtrar los restaurantes según el tipo de comida que ofrecen.
+Given que el consumidor se encuentra en la ventana de reseñas  
+When ingrese su comentario y presione el botón de publicar
+Then se publicará el comentario.
+
+
+
 

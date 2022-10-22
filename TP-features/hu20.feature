@@ -1,16 +1,19 @@
-Feature: HU20 - Como cliente quiero ver el catálogo actual de platos e insumos ofrecidos por mi establecimiento para corroborar que los datos de la App coincidan con mi inventario.
+Feature: HU20 - Como cliente quiero ser capaz de editar las características que coloqué sobre algún plato o insumo para corregir errores o actualizar la información.
 
-Scenario: E01 - El cliente ingresa correctamente a la lista de opciones.
-
-TA01
-Given que el cliente ha iniciado sesión, se encuentra en la lista de opciones ofrecida de Tasty point y desea revisar su catálogo.   
-When el cliente seleccione la opción "Catálogo".   
-Then la aplicación mostrará la totalidad de platos e insumos registrados por el cliente, junto a datos pertinentes como: la cantidad actual, reservas hechas y tipo de recojo o envío disponible.
-
-Scenario: E02 - El cliente elige ver solo platos o solo insumos del catálogo.
+Scenario: E01 - El cliente ingresa correctamente al modo edición.
 
 TA01
-Given que el cliente se encuentra en la lista de platos e insumos disponibles ofrecidos por su establecimiento, y desea ver sólo los platos o insumos ofrecidos por su establecimiento.   
-When el cliente seleccione la opción filtro y elija la opción “platos” o “insumos”.   
-Then la aplicación listará solo platos o solo insumos (dependiendo de la opción del cliente) junto a sus datos pertinentes.
+Given que el cliente se encuentra en la ventana “Catálogo” 
+And quiera editar algún dato presentado. 
+When el cliente seleccione el botón editar del plato a editar. 
+Then la aplicación permitirá la edición de los datos o multimedia ingresados (Nombre del plato, precio real, precio ofrecido, tipo de recojo o envío, foto del plato/insumo, etc).
 
+Scenario: E02 - El cliente guarda correctamente los datos editados.
+
+TA01
+Givne que el cliente ha terminado de editar los datos requeridos 
+And quiere guardar los cambios. 
+When el cliente elija el botón aceptar. 
+Then se guardará 
+And actualizará la información ofrecida; 
+And se mostrará una ventana emergente de “Se han guardado los cambios”.

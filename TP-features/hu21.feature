@@ -1,9 +1,10 @@
-Feature: HU21 - Como cliente quiero contar con la vista de consumidor para asegurar que mis productos se vean atractivos para los consumidores.
+Feature: HU21 - Como cliente es de mi interés que las ventas aumenten, por lo tanto, es de suma importancia que dentro de la app exista algún botón o enlace que los direccione a la carta disponible en mi restaurante y asegurar su compra.
 
-Scenario: E01 - El cliente ingresa correctamente a “vista de consumidor”
+Scenario: E01 - El cliente asegura una venta y se guarda el registro del platillo, siendo así que para la compra futura se recomiendan platillos similares.
 
 TA01
-Given que el cliente se encuentra en la lista de platos e insumos disponibles ofrecidos por su establecimiento y desea abrir la “vista de consumidor”.   
-When el cliente seleccione el producto que quiera revisar.   
-Then la aplicación mostrará la ventana de descripción del producto tal como se le presenta al cliente.
+Given que el cliente se encuentra dentro de la aplicación  
+When decida qué platillo consumir,    
+Then aparecen CTA atractivos de los restaurantes asociados a la aplicación, apareciendo botones con enlaces que los envía a la página del restaurante.
+
 

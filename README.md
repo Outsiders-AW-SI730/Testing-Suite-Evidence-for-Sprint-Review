@@ -9,4 +9,4 @@ programación. En esta sección se debe incluir la relación de tests diseñados
 caso de los Unit Tests, debe indicarse con qué clases y comportamientos se
 relacionan. En el caso de los Integration Tests ó Acceptance Tests bajo el enfoque
 BDD, se incluye el código de los .feature Files, explicando con qué User Stories se
-relacionan waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa morir
+relacionan.
